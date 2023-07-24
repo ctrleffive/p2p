@@ -5,27 +5,26 @@
   <meta charset="UTF-8" />
   <base href="/">
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="manifest" href="/assets/site.webmanifest">
   <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#dcfce7">
+  <meta name="theme-color" content="#dcfce7" id="themeMeta">
   <!--  -->
   
   <!--  -->
-  <title>P2P - Peer to peer file transfer</title>
-  <script type="module" crossorigin src="/assets/index-ec0378a5.js"></script>
-  <link rel="stylesheet" href="/assets/index-49e5e347.css">
+  <title>P2P - Peer to peer data transfer.</title>
+  <script type="module" crossorigin src="/assets/index-8f844bb1.js"></script>
+  <link rel="stylesheet" href="/assets/index-13f33a0f.css">
 </head>
 
 <body
-  class="h-full overflow-hidden text-center bg-gradient-to-br from-green-100 to-cyan-200 dark:from-indigo-950 dark:to-cyan-950 font-mono text-sm select-none group">
+  class="h-full overflow-hidden text-center bg-gradient-to-b from-green-100 to-cyan-200 dark:from-indigo-950 dark:to-cyan-950 font-mono text-sm select-none group">
   <div
     class="fixed inset-0 flex items-center justify-center transition-opacity duration-200 opacity-0 group-data-[dragEnabled]:opacity-100 flex-col pointer-events-none">
-    <span class="text-5xl relative -translate-y-5 group-data-[dragEnabled]:translate-y-0 transition-transform duration-200">👇</span>
+    <span
+      class="text-5xl relative -translate-y-5 group-data-[dragEnabled]:translate-y-0 transition-transform duration-200">👇</span>
     <span class="mt-4 dark:text-white">drop here...</span>
   </div>
   <div
@@ -51,6 +50,7 @@
           <!--  -->
           <input type="text"
             class="bg-white dark:bg-black dark:bg-opacity-20 bg-opacity-50 transition-all shadow-sm focus:shadow-lg textblack dark:text-cyan-100 rounded-md w-72 px-4 py-3 bg-transparent border-blue-400 effectUp select-text text-center mb-6"
+            onclick="this.select()"
             autofocus placeholder="send text by typing here..." id="textInput">
           <!--  -->
           <div class="hidden flex-col items-center effectUp" id="sendButtonWrap">
@@ -71,7 +71,7 @@
       </div>
     </div>
     <!--  -->
-    <div class="opacity-50 text-xs dark:text-white px-5 py-7">
+    <div class="opacity-50 text-xs dark:text-white px-5 pb-8 sm:py-7">
       <a href="/">reset</a>
       <span class="opacity-25">|</span>
       <a target="_blank" class="whitespace-nowrap" href="https://github.com/ctrleffive/p2p">source</a>
